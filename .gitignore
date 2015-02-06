@@ -1,0 +1,7 @@
+# sass cache
+.sass-cache
+*.DS_Store
+
+# gulp配置文件
+gulpfile.js
+node_modules

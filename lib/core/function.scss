@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}
+
+
+@function set-property($element,$property,$value){
+    @if $property == default {
+        $property: map-get($element, $value);
+        @return $property;
+    }@else{
+        @return $property;
+    }
+}
+
+
+@mixin has-property($element,$property,$value) {
+    @if $property != map-get($element, $value) {
+        @content;
+    }
+}
+
+@mixin set-theme($obj,$class){
+    @each $name, $value in map-deep-get($obj, theme) {
+        #{$class}-#{$name} {
+            background: nth($value,1);
+            color: nth($value,2);
+        }
+    }    
+}
