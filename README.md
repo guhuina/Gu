@@ -1,13 +1,13 @@
 # Gu
 移动前端CSS Framework 
+> Inspired by Yo
 
-## element
+## Element
 
 * gu-loading
 
-## fragment
+## Fragment
 
 * gu-header
 * gu-list
 
-> Inspired by Yo
