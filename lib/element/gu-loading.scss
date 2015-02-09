@@ -9,7 +9,7 @@
 	height:100%;
 	overflow:hidden;
 }
-.square 
+.cyclinder 
 {
   width: 6px;
   height: 22px;
@@ -38,7 +38,7 @@
 }
 
 
-.reverse .square
+.reverse .cyclinder
 {
   background: #7bb7fa;
 }
@@ -52,7 +52,7 @@
   transform: rotate(-90deg);  
 }
 
-.top .square
+.top .cyclinder
 {
   background: #fd6a62;
 }
@@ -65,7 +65,7 @@
   transform: rotate(90deg);
 }
 
-.bottom .square
+.bottom .cyclinder
 {
   background: #fdc162;
 }
@@ -90,6 +90,72 @@
   animation:fade 3s ease infinite;
 }
 
+
+
+.pop{
+    @include center;
+    .cricle{
+        width: .3rem;
+        height: .3rem;
+        background:#fdc162;
+        display: inline-block;
+        @include circle; 
+        @include transform(scale(.5));
+        -webkit-animation:zoom 3s ease infinite;
+        animation:zoom 3s ease infinite;     
+    }
+    .cricle:nth-child(2){
+        -webkit-animation-delay: 1s;
+        animation-delay: 1s;
+        background:#fd6a62;
+    }
+    .cricle:nth-child(3){
+        -webkit-animation-delay: 2s;
+        animation-delay: 2s;
+        background:#0ac2d2;
+    }
+    .ring{
+        width: .6rem;
+        height: .6rem;
+        border:.03rem solid #60d7a9;
+        @include circle;
+        @include animation(rotate 2s linear infinite); 
+        .dot{
+            width: .1rem;
+            height: .1rem;
+            background: #60d7a9;
+            @include circle;
+            @include transform(translate(.05rem,.05rem));  
+        }
+    }
+    .rect{
+        width: .05rem;
+        height: .03rem;
+        background:#7bb7fa;
+        display:inline-block;
+        @include animation(audioWave 1.5s linear infinite); 
+
+        @for $i from 2 through 9 {
+            &:nth-child(#{$i}){
+                -webkit-animation-delay: $i*.2s; 
+            }
+        }
+    }
+    .square{
+        width: .3rem;
+        height: .3rem;
+        background:#fd6a62;
+        display:inline-block;
+        @include animation(cubemove 1.8s ease-in-out infinite); 
+        &:nth-child(2){
+            background:#60d7a9;
+            position:relative;
+            left: -.3rem;
+            -webkit-animation-delay: .9s; 
+        }
+    }
+}
+
 @-webkit-keyframes moveAround 
 {
   0% { -webkit-transform: translateX(0); }  
@@ -107,7 +173,98 @@
   100% { transform: translateX(0%) translateY(0%) rotate(0deg); }
 }
 
+@-webkit-keyframes rotate{
+    from {
+        -webkit-transform: rotate(0deg);  
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes rotate{
+    from {
+        transform: rotate(0deg);  
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes cubemove {
+    25%{
+        -webkit-transform: translateX(.3rem*2) rotate(-90deg) scale(0.5);
+    }
+    50%{ 
+        -webkit-transform: translateX(.3rem*2) translateY(.3rem*2) rotate(-180deg);
+    }
+    75%{
+    -webkit-transform: translateX(0px) translateY(.3rem*2) rotate(-270deg) scale(0.5);
+    }
+    100%{
+     -webkit-transform: rotate(-360deg);
+    }
+}
+
+@keyframes cubemove {
+    25% {
+        transform: translateX(.3rem*2) rotate(-90deg) scale(0.5);
+    } 
+    50% {
+        transform: translateX(.3rem*2) translateY(.3rem*2) rotate(-180deg);
+    } 
+    75% {
+        transform: translateX(0px) translateY(.3rem*2) rotate(-270deg) scale(0.5);
+    } 
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@-webkit-keyframes audioWave {
+    
+    50%{
+        -webkit-transform: scale(1,15);
+        
+    }
+    0%,100%{
+        -webkit-transform: scale(1,1);
+        
+    }
+}
+@keyframes audioWave {
+    
+    50%{
+        transform: scale(1,15);
+        
+    }
+    0%,100%{
+        transform: scale(1,1);
+        
+    }
+}
 
 
+
+@-webkit-keyframes zoom {
+    
+    50%{
+        -webkit-transform: scale(1);
+        opacity: .5;
+    }
+    0%,100%{
+        -webkit-transform: scale(.5);
+        opacity: 1;
+    }
+}
+@keyframes zoom {
+    50%{
+        transform: scale(5) translateX(80%) translateY(-50%);
+        opacity: .5;
+    }
+    0%,100%{
+        transform: scale(1) translateX(0%) translateY(0%);
+        opacity: 1;
+    }
+} 
 
 
