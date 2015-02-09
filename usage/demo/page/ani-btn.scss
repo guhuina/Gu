@@ -1,0 +1,12 @@
+@charset "utf-8";
+@import "../layout/layout";
+@import "../module/m-demo";
+@import "../module/m-code";
+@import "../../../lib/element/gu-btn";
+@import "../../../lib/animate/gu-btn";
+
+.box{
+	// width:2rem;
+	// height:2rem;
+	@include center;
+}
