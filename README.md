@@ -4,6 +4,7 @@
 
 ## Element
 
+* gu-btn
 * gu-loading
 
 ## Fragment

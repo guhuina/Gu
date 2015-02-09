@@ -1,0 +1,11 @@
+@charset "utf-8";
+@import "../layout/layout";
+@import "../module/m-demo";
+@import "../module/m-code";
+@import "../../../lib/fragment/gu-header";
+@import "../../../lib/fragment/gu-list";
+@import "../../../lib/element/gu-btn";
+
+.gu-btn:not(:last-child){
+	margin-right:.1rem;
+}

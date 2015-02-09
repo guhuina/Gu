@@ -1,0 +1,37 @@
+.gu-btn {
+    display: inline-block;
+    overflow: hidden;
+    padding: map-get($btn, padding);
+    border: .01rem solid map-get($btn, bordercolor);
+    // 内阴影，用来描内部的1px白边
+    box-shadow: inset 1px 1px rgba(255, 255, 255, .1);
+    border-radius: map-get($btn, radius);
+    background-color: map-get($btn, bgcolor);
+    color: map-get($btn, color);
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    &:focus,
+    &:active {
+        opacity: .8;
+    }
+    &-s {
+        height: map-get($btn, s-height);
+        line-height: map-get($btn, s-height);
+        font-size: map-get($btn, s-font-size);
+    }
+    &-m {
+        height: map-get($btn, m-height);
+        line-height: map-get($btn, m-height);
+        font-size: map-get($btn, m-font-size);
+    }
+    &-l {
+        height: map-get($btn, l-height);
+        line-height: map-get($btn, l-height);
+        font-size: map-get($btn, l-font-size);
+    }
+    &-stacked {
+        width: 100%;
+    }
+}
+@include set-theme($btn,".gu-btn");
