@@ -1,4 +1,4 @@
-.gu-header{	
+.gu-header {
 	position: relative;
 	overflow: hidden;
 	height: map-get($header, height);
@@ -20,31 +20,25 @@
 		@include ellipsis;
 		margin: 0 map-deep-get($header, item, width);
 	}
-	> .regret,
-    > .affirm {
-        position: absolute;
-        top: 0;
-        width: map-deep-get($header, item, width);
-        // 如果config预设值不等于parent font-size，则重绘子项的font-size
+	> .regret, > .affirm {
+		position: absolute;
+		top: 0;
+		width: map-deep-get($header, item, width);
+		// 如果config预设值不等于parent font-size，则重绘子项的font-size
 		@if map-deep-get($header, item, font-size) != map-get($header, font-size) {
-	        font-size: map-deep-get($header, item, font-size);
-	    }
-        @include link;
-    }
-    > .regret {
-    	left: 0;
-    	padding-left: map-deep-get($header, item, space);
-        text-align: left;
-    }
-    > .affirm {
-    	right: 0;
-    	padding-right: map-deep-get($header, item, space);
-    	text-align: right;
-    }
-
-	
-    
+			font-size: map-deep-get($header, item, font-size);
+		}
+		@include link;
+	}
+	> .regret {
+		left: 0;
+		padding-left: map-deep-get($header, item, space);
+		text-align: left;
+	}
+	> .affirm {
+		right: 0;
+		padding-right: map-deep-get($header, item, space);
+		text-align: right;
+	}
 }
-
-@include set-theme($header,".gu-header");
-
+@include set-theme($header, ".gu-header");

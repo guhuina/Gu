@@ -1,29 +1,29 @@
-.gu-list{
-	background: map-get($list, bgcolor);
-	.item{
-		background: map-deep-get($list, item, bgcolor);
-		font-size: map-deep-get($list, item, font-size);
-		line-height: map-deep-get($list, item, font-size) * 1.5;
-		padding: map-deep-get($list, item, padding);
-		border-bottom: 1px solid map-deep-get($list, item, bordercolor);
-		color: map-deep-get($list, item, color);
-		@include flexbox;
-		&:active{
-			background: map-deep-get($list, item, active-bgcolor);
-		}
-		.decorate{
-			display: inline-block;
-			width: .2rem;
-			color: map-deep-get($list, decorate, color);
-			font-size: map-deep-get($list,decorate, font-size);
-			margin-right: .05rem;
-		}
-		.cont{
-			@include flex(1);
-		}
-		.exec{
-			color: map-deep-get($list, exec, color);
-			font-size: map-deep-get($list, exec, font-size);
-		}
-	}
+.gu-list {
+    background: map-get($list, bgcolor);
+    .item {
+        background: map-deep-get($list, item, bgcolor);
+        font-size: map-deep-get($list, item, font-size);
+        line-height: map-deep-get($list, item, font-size) * 1.5;
+        padding: map-deep-get($list, item, padding);
+        border-bottom: 1px solid map-deep-get($list, item, bordercolor);
+        color: map-deep-get($list, item, color);
+        @include flexbox;
+        &:active {
+            background: map-deep-get($list, item, active-bgcolor);
+        }
+        .decorate {
+            display: inline-block;
+            width: .2rem;
+            color: map-deep-get($list, decorate, color);
+            font-size: map-deep-get($list, decorate, font-size);
+            margin-right: .05rem;
+        }
+        .cont {
+            @include flex(1);
+        }
+        .exec {
+            color: map-deep-get($list, exec, color);
+            font-size: map-deep-get($list, exec, font-size);
+        }
+    }
 }

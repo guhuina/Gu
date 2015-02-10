@@ -187,10 +187,10 @@ $btn:(
 	// 预设disabled状态
 	theme:(
 		//{bgcolor} {color} {bordercolor}
-		disabled: #eee #d9d9d9 #dfdfdf,
-		light: #fff #212121 #ddd,
-		normal: #eee #212121 #ddd,
-		info:#4a87ee #fff #0456e2
+        disabled : #eee #d9d9d9 #dfdfdf,
+        light    : #fff #212121 #ddd,
+        normal   : #eee #212121 #ddd,
+        info     : #4a87ee #fff #0456e2
 	)
 )!default;
 
