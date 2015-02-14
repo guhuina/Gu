@@ -17,3 +17,4 @@
 * gu-page
 * gu-btn
 * gu-text
+* gu-box
