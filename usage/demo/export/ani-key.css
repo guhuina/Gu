@@ -1,0 +1,771 @@
+@charset "UTF-8";
+/**
+ * Directory: lib/core/variables.scss
+ * CSS Variables 定义各种页面沙粒变量
+ * Author: huina.gu
+ * Time: 2015.2.6
+ */
+/**
+ * Directory: lib/core/classes.scss
+ * Global Classes 约定常规解决方案
+ * Author: huina.gu
+ * Time: 2015.2.6
+ */
+/**
+ * 给需要的属性加厂家前缀
+ * @method prefix
+ * @param {String} $appearance 指定属性
+ * @param {String} $value 指定属性值
+ */
+/**
+ * 定义响应式方案
+ * @method responsive
+ * @param {String} $media 指定媒体查询条件
+ * 使用方法如下，结合variables中的$media-types：
+    @include responsive(phone) {
+        .foo {
+            background: blue;
+        }
+    }
+ */
+/**
+ * 定义字体图标
+ * @method yofont
+ */
+/**
+ * 定义UA默认外观
+ * @method appearance
+ * @param {String} $appearance 指定UA外观类型
+ */
+/**
+ * 定义是否可以选中元素
+ * @method user-select
+ * @param {String} $user-select 指定是否可以选中
+ */
+/**
+ * 定义渐变色值
+ * @method gradient
+ * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial
+ * @param {String} $gradient 指定渐变取值，与原生语法一致
+ */
+/**
+ * 定义盒模型
+ * @method box-sizing
+ * @param {String} $box-sizing 的2个值分别为：content-box(标准盒模型) | border-box(怪异盒模型)
+ */
+/**
+ * 定义简单变换
+ * @method transform
+ * @param {String} $transform 取值与原生语法一致
+ */
+/**
+ * 定义变换原点
+ * @method transform-origin
+ * @param {String} $transform-origin 取值与原生语法一致
+ */
+/**
+ * 定义动画
+ * @method animation
+ * @param {String} $animation 取值与原生语法一致
+ */
+/**
+ * 定义补间
+ * @method transition
+ * @param {String} $transition 取值与原生语法一致
+ */
+/**
+ * Directory: lib/core/reset.scss
+ * Global Classes 约定常规解决方案
+ * Author: huina.gu
+ * Time: 2015.2.6
+ * Note: only for mobile
+ */
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; }
+
+html {
+  background-color: #fafafa;
+  color: #212121;
+  font-size: 100px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none; }
+
+body {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif; }
+
+ul, ol, dl, dd, h1, h2, h3, h4, h5, h6, figure, form, fieldset, legend, input, textarea, button, p, blockquote, th, td, pre, xmp {
+  margin: 0;
+  padding: 0; }
+
+input, textarea, button, select, pre, tt, code, kbd, samp, optgroup, option {
+  line-height: inherit;
+  font-family: inherit; }
+
+h1, h2, h3, h4, h5, h6, input, textarea, button, select, small, big {
+  font-size: inherit; }
+
+address, cite, dfn, em, i, optgroup, var {
+  font-style: normal; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  text-align: left; }
+
+caption, th {
+  text-align: inherit; }
+
+ul, ol, menu {
+  list-style: none; }
+
+fieldset, img {
+  border: 0; }
+
+img {
+  vertical-align: top; }
+
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "\0020"; }
+
+textarea, pre {
+  overflow: auto; }
+
+textarea {
+  resize: vertical; }
+
+textarea, input, button, a {
+  outline: 0; }
+
+textarea, input, button {
+  color: inherit; }
+  textarea:disabled, input:disabled, button:disabled {
+    opacity: 1; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+input[type="button"], input[type="submit"], input[type="reset"], input[type="file"]::-webkit-file-upload-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+mark {
+  background-color: transparent; }
+
+a, ins, s, u, del {
+  text-decoration: none; }
+
+a, img {
+  -webkit-touch-callout: none; }
+
+a {
+  color: #00afc7; }
+
+.g-clear::after, .g-mod::after {
+  display: block;
+  overflow: hidden;
+  clear: both;
+  height: 0;
+  content: "\0020"; }
+
+@font-face {
+  font-family: fontawesome-webfont;
+  src: url(http://source.qunarzz.com/fonts/fontawesome/4.2.0/fontawesome-webfont.eot);
+  src: url(http://source.qunarzz.com/fonts/fontawesome/4.2.0/fontawesome-webfont.eot?#iefix) format("embedded-opentype"), url(http://source.qunarzz.com/fonts/fontawesome/4.2.0/fontawesome-webfont.woff) format("woff"), url(http://source.qunarzz.com/fonts/fontawesome/4.2.0/fontawesome-webfont.ttf) format("truetype"), url(http://source.qunarzz.com/fonts/fontawesome/4.2.0/fontawesome-webfont.svg#iconfont) format("svg"); }
+.yo-ico {
+  font-family: fontawesome-webfont !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: .1px;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: middle; }
+
+/**
+ * Directory: lib/core/variables.scss
+ * CSS Variables 定义各种页面沙粒变量
+ * Author: huina.gu
+ * Time: 2015.2.6
+ */
+/**
+ * Directory: lib/core/classes.scss
+ * Global Classes 约定常规解决方案
+ * Author: huina.gu
+ * Time: 2015.2.6
+ */
+/**
+ * 给需要的属性加厂家前缀
+ * @method prefix
+ * @param {String} $appearance 指定属性
+ * @param {String} $value 指定属性值
+ */
+/**
+ * 定义响应式方案
+ * @method responsive
+ * @param {String} $media 指定媒体查询条件
+ * 使用方法如下，结合variables中的$media-types：
+    @include responsive(phone) {
+        .foo {
+            background: blue;
+        }
+    }
+ */
+/**
+ * 定义字体图标
+ * @method yofont
+ */
+/**
+ * 定义UA默认外观
+ * @method appearance
+ * @param {String} $appearance 指定UA外观类型
+ */
+/**
+ * 定义是否可以选中元素
+ * @method user-select
+ * @param {String} $user-select 指定是否可以选中
+ */
+/**
+ * 定义渐变色值
+ * @method gradient
+ * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial
+ * @param {String} $gradient 指定渐变取值，与原生语法一致
+ */
+/**
+ * 定义盒模型
+ * @method box-sizing
+ * @param {String} $box-sizing 的2个值分别为：content-box(标准盒模型) | border-box(怪异盒模型)
+ */
+/**
+ * 定义简单变换
+ * @method transform
+ * @param {String} $transform 取值与原生语法一致
+ */
+/**
+ * 定义变换原点
+ * @method transform-origin
+ * @param {String} $transform-origin 取值与原生语法一致
+ */
+/**
+ * 定义动画
+ * @method animation
+ * @param {String} $animation 取值与原生语法一致
+ */
+/**
+ * 定义补间
+ * @method transition
+ * @param {String} $transition 取值与原生语法一致
+ */
+/**
+ * Directory: lib/layout/classes.scss
+ * Global Layout Classes 约定布局方案
+ * Author: joy.du(飘零雾雨)
+ * Time: 2012.1.1
+ */
+/**
+ * document: doc
+ * Author: joy.du(飘零雾雨)
+ * Time: 2012.1.1
+ ------------------------
+ * @method doc
+ * @param {String} $name 定义page-name
+ * @param {String} $fixed 定义头尾是否固定
+ * @param {Length} $hd-gap 定义主体到viewport顶部的距离
+ * @param {Length} $ft-gap 定义主体到viewport底部的距离
+ */
+/**
+ * Directory: lib/core/variables.scss
+ * CSS Variables 定义各种页面沙粒变量
+ * Author: huina.gu
+ * Time: 2015.2.6
+ */
+/**
+ * Directory: lib/core/classes.scss
+ * Global Classes 约定常规解决方案
+ * Author: huina.gu
+ * Time: 2015.2.6
+ */
+/**
+ * 给需要的属性加厂家前缀
+ * @method prefix
+ * @param {String} $appearance 指定属性
+ * @param {String} $value 指定属性值
+ */
+/**
+ * 定义响应式方案
+ * @method responsive
+ * @param {String} $media 指定媒体查询条件
+ * 使用方法如下，结合variables中的$media-types：
+    @include responsive(phone) {
+        .foo {
+            background: blue;
+        }
+    }
+ */
+/**
+ * 定义字体图标
+ * @method yofont
+ */
+/**
+ * 定义UA默认外观
+ * @method appearance
+ * @param {String} $appearance 指定UA外观类型
+ */
+/**
+ * 定义是否可以选中元素
+ * @method user-select
+ * @param {String} $user-select 指定是否可以选中
+ */
+/**
+ * 定义渐变色值
+ * @method gradient
+ * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial
+ * @param {String} $gradient 指定渐变取值，与原生语法一致
+ */
+/**
+ * 定义盒模型
+ * @method box-sizing
+ * @param {String} $box-sizing 的2个值分别为：content-box(标准盒模型) | border-box(怪异盒模型)
+ */
+/**
+ * 定义简单变换
+ * @method transform
+ * @param {String} $transform 取值与原生语法一致
+ */
+/**
+ * 定义变换原点
+ * @method transform-origin
+ * @param {String} $transform-origin 取值与原生语法一致
+ */
+/**
+ * 定义动画
+ * @method animation
+ * @param {String} $animation 取值与原生语法一致
+ */
+/**
+ * 定义补间
+ * @method transition
+ * @param {String} $transition 取值与原生语法一致
+ */
+/**
+ * Directory: lib/layout/classes.scss
+ * Global Layout Classes 约定布局方案
+ * Author: joy.du(飘零雾雨)
+ * Time: 2012.1.1
+ */
+/**
+ * Layout: gu-stacked
+ * Author: joy.du(飘零雾雨)
+ * Edit: 2015.1.15
+ -----------------------
+ * @method stacked
+ * variables length(2)
+ * @param {defailt | String} $name 定义名称
+ * @param {defailt | Color} $margin 定义外边距
+ */
+.gu-stacked {
+  display: block;
+  margin: 0.2rem 0.1rem; }
+  .gu-stacked::after {
+    display: block;
+    overflow: hidden;
+    clear: both;
+    height: 0;
+    content: "\0020"; }
+
+/**
+* document layout
+* Author: joy.du(飘零雾雨)
+* Time: 2013.10.17
+*/
+/**
+ * module: m-demo
+ * Author: joy.du(飘零雾雨)
+ * Time: 2013.10.17
+ */
+@media screen and (min-width: 800px) {
+  .m-demo {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    margin: .1rem; } }
+.m-demo .device .stage {
+  position: relative;
+  height: 5.68rem; }
+@media screen and (min-width: 800px) {
+  .m-demo .device {
+    position: relative;
+    width: 3.66rem;
+    height: 7.83rem;
+    border: .05rem solid #505559;
+    border-radius: .55rem;
+    background-color: #313538; }
+    .m-demo .device::before, .m-demo .device::after {
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translate(-50%);
+      -moz-transform: translate(-50%);
+      transform: translate(-50%);
+      content: "\0020"; }
+    .m-demo .device::before {
+      top: .58rem;
+      width: .68rem;
+      height: .08rem;
+      border-radius: 4px;
+      background-color: #3e4243; }
+    .m-demo .device::after {
+      bottom: .18rem;
+      width: 0.65rem;
+      height: 0.65rem;
+      border: .05rem solid #3e4243;
+      border-radius: 50%; }
+    .m-demo .device .stage {
+      top: .99rem;
+      left: .18rem;
+      width: 3.20rem;
+      background-color: #fff; }
+      .m-demo .device .stage, .m-demo .device .stage::before {
+        position: absolute; }
+      .m-demo .device .stage::before {
+        top: -.68rem;
+        left: 50%;
+        -webkit-transform: translate(-50%);
+        -moz-transform: translate(-50%);
+        transform: translate(-50%);
+        width: 0.1rem;
+        height: 0.1rem;
+        border-radius: 50%;
+        background-color: #3e4243;
+        box-shadow: -.5rem .26rem #3e4243;
+        content: "\0020"; } }
+.m-demo .code {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  display: block;
+  width: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  user-select: text;
+  margin: .1rem 0;
+  border-width: .04rem 0 .04rem 0;
+  border-style: solid;
+  border-color: #D7DBE4;
+  padding: .1rem;
+  background-color: #F0F3F8;
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace; }
+  @media screen and (min-width: 800px) {
+    .m-demo .code {
+      margin: .1rem;
+      border-width: 0 0 0 .04rem; } }
+  .m-demo .code h3 {
+    margin-top: .1rem; }
+
+/**
+ * module: m-code
+ * Author: joy.du(飘零雾雨)
+ * Time: 2013.10.17
+ */
+.m-code {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background: #272822;
+  color: #51bbe1;
+  font-size: 20px; }
+  .m-code .method {
+    color: #93de08; }
+  .m-code .bracket,
+  .m-code .colon {
+    padding-right: 5px;
+    color: #fff; }
+  .m-code mark {
+    background: none;
+    color: #ccc;
+    font-size: 16px; }
+
+body {
+  font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #79a8ae;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5em; }
+
+h1 {
+  color: #111;
+  margin: 0 0 12px 0;
+  font-size: 24px;
+  line-height: 1.5em; }
+
+p {
+  margin: 0 0 10x 0; }
+
+a {
+  color: #888;
+  text-decoration: none;
+  border-bottom: 1px solid #ccc; }
+
+a:hover {
+  border-bottom-color: #888; }
+
+body,
+.overlay {
+  -webkit-perspective: 1000;
+  -webkit-perspective-origin-y: 25%; }
+
+.body--ready {
+  /* Ideas
+  background: -webkit-linear-gradient(top, #e2b986 -10%, #241c35 140%);
+  background: -webkit-linear-gradient(top, #c97369 -40%, #241c35 130%);
+  background: -webkit-linear-gradient(top, #fac4c4 -10%, #606386 140%);
+  background: -webkit-linear-gradient(top, #519ab0 0%, #414A6D 110%);
+  background: -webkit-linear-gradient(top, rgb(129, 0, 170) 0%, rgb(43, 4, 114) 110%);
+  background: -webkit-linear-gradient(top, rgb(163, 235, 189) 0%, rgb(16, 93, 145) 110%);
+  background: -webkit-linear-gradient(top, rgb(165, 103, 189) 0%, rgb(75, 233, 214) 120%);
+  */
+  background: -webkit-linear-gradient(top, #cbebdb 0%, #3794c0 120%);
+  background: -moz-linear-gradient(top, #cbebdb 0%, #3794c0 120%);
+  background: -o-linear-gradient(top, #cbebdb 0%, #3794c0 120%);
+  background: -ms-linear-gradient(top, #cbebdb 0%, #3794c0 120%);
+  background: linear-gradient(top, #cbebdb 0%, #3794c0 120%); }
+
+.body--ready .overlay {
+  -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1), opacity 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1);
+  -moz-transition: -moz-transform 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1), opacity 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1);
+  -ms-transition: -ms-transform 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1), opacity 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1);
+  -o-transition: -o-transform 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1), opacity 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1);
+  transition: transform 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1), opacity 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1); }
+
+.ui {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  width: 300px;
+  margin-left: -150px; }
+
+.ui-input {
+  width: 100%;
+  height: 50px;
+  background: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  border: none;
+  border-bottom: 2px solid white; }
+
+.ui-input:focus {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid white; }
+
+.ui-return {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  padding: 3px 2px 0 2px;
+  font-size: 10px;
+  line-height: 10px;
+  color: #fff;
+  border: 1px solid #fff; }
+
+.ui--enter .ui-return {
+  display: block; }
+
+.ui--wide {
+  width: 76%;
+  margin-left: 12%;
+  left: 0; }
+
+.ui--wide .ui-return {
+  right: -20px; }
+
+.help {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 27px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #fff;
+  color: #79a8ae;
+  opacity: .9;
+  -webkit-transition: opacity 0.1s cubic-bezier(0.694, 0.0482, 0.335, 1);
+  -moz-transition: opacity 0.1s cubic-bezier(0.694, 0.0482, 0.335, 1);
+  -ms-transition: opacity 0.1s cubic-bezier(0.694, 0.0482, 0.335, 1);
+  -o-transition: opacity 0.1s cubic-bezier(0.694, 0.0482, 0.335, 1);
+  transition: opacity 0.1s cubic-bezier(0.694, 0.0482, 0.335, 1); }
+
+.help:hover {
+  opacity: 1; }
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 550px;
+  height: 490px;
+  margin: -260px 0 0 -275px;
+  opacity: 0;
+  -webkit-transform: rotateY(90deg);
+  -moz-transform: rotateY(90deg);
+  -ms-transform: rotateY(90deg);
+  -o-transform: rotateY(90deg);
+  transform: rotateY(90deg); }
+
+.overlay--visible {
+  opacity: 1;
+  -webkit-transform: rotateY(0);
+  -moz-transform: rotateY(0);
+  -ms-transform: rotateY(0);
+  -o-transform: rotateY(0);
+  transform: rotateY(0); }
+
+.ui-share,
+.ui-details {
+  opacity: .9;
+  background: #fff;
+  z-index: 2; }
+
+.ui-details-content,
+.ui-share-content {
+  padding: 100px 50px; }
+
+.commands {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  cursor: pointer; }
+
+.commands-item {
+  font-size: 12px;
+  line-height: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 20px;
+  background: #fff;
+  margin-top: 1px;
+  color: #333;
+  opacity: .9;
+  -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.694, 0.0482, 0.335, 1), opacity 0.1s cubic-bezier(0.694, 0.0482, 0.335, 1);
+  -moz-transition: -moz-transform 0.1s cubic-bezier(0.694, 0.0482, 0.335, 1), opacity 0.1s cubic-bezier(0.694, 0.0482, 0.335, 1);
+  -ms-transition: -ms-transform 0.1s cubic-bezier(0.694, 0.0482, 0.335, 1), opacity 0.1s cubic-bezier(0.694, 0.0482, 0.335, 1);
+  -o-transition: -o-transform 0.1s cubic-bezier(0.694, 0.0482, 0.335, 1), opacity 0.1s cubic-bezier(0.694, 0.0482, 0.335, 1);
+  transition: transform 0.1s cubic-bezier(0.694, 0.0482, 0.335, 1), opacity 0.1s cubic-bezier(0.694, 0.0482, 0.335, 1); }
+
+.commands-item--gap {
+  margin-top: 9px; }
+
+.commands-item:hover {
+  opacity: 1; }
+
+.commands-item:hover .commands-item-action {
+  background: #333; }
+
+.commands-item a {
+  display: inline-block; }
+
+.commands-item-mode {
+  display: inline-block;
+  margin-left: 3px;
+  font-style: italic;
+  color: #ccc; }
+
+.commands-item-title {
+  display: inline-block;
+  width: 150px; }
+
+.commands-item-info {
+  display: inline-block;
+  width: 300px;
+  font-size: 14px;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: normal;
+  color: #aaa; }
+
+.commands-item-action {
+  display: inline-block;
+  float: right;
+  margin-top: 3px;
+  text-transform: uppercase;
+  font-size: 10px;
+  line-height: 10px;
+  color: #fff;
+  background: #90c9d1;
+  padding: 5px 10px 4px 10px;
+  border-radius: 3px; }
+
+.commands-item:first-child {
+  margin-top: 0; }
+
+.twitter-share {
+  position: absolute;
+  top: 4px;
+  right: 20px; }
+
+.tabs-labels {
+  margin-bottom: 9px; }
+
+.tabs-label {
+  display: inline-block;
+  background: #fff;
+  padding: 10px 20px;
+  font-size: 12px;
+  line-height: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #333;
+  opacity: .5;
+  cursor: pointer;
+  margin-right: 2px;
+  -webkit-transition: opacity 0.1s cubic-bezier(0.694, 0.0482, 0.335, 1);
+  -moz-transition: opacity 0.1s cubic-bezier(0.694, 0.0482, 0.335, 1);
+  -ms-transition: opacity 0.1s cubic-bezier(0.694, 0.0482, 0.335, 1);
+  -o-transition: opacity 0.1s cubic-bezier(0.694, 0.0482, 0.335, 1);
+  transition: opacity 0.1s cubic-bezier(0.694, 0.0482, 0.335, 1); }
+
+.tabs-label:hover {
+  opacity: .9; }
+
+.tabs-label--active {
+  opacity: .9; }
+
+.tabs-panel {
+  display: none; }
+
+.tabs-panel--active {
+  display: block; }
+
+.tab-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; }
+
+.touch .ui-input {
+  display: none; }
