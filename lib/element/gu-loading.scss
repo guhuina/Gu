@@ -112,10 +112,7 @@
         display: inline-block;
         @include animation(audioWave 1.5s linear infinite);
         @for $i from 2 through 9 {
-            &:nth-child(# {
-                $i
-            }
-            ) {
+            &:nth-child(#{$i}) {
                 -webkit-animation-delay: $i*.2s
             }
         }
