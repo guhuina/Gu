@@ -15,3 +15,5 @@
 ## Animate
 
 * gu-page
+* gu-btn
+* gu-text

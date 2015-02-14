@@ -1,0 +1,67 @@
+@charset "utf-8";
+@import "../layout/layout";
+@import "../module/m-demo";
+@import "../module/m-code";
+
+
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+.page{
+	width: 100%;
+	height: 100%;
+	background: #F0544F;
+	color: #fff;
+	font-family: 'Poiret One', sans-serif;
+	overflow: hidden;
+}
+
+.page{
+  display: flex;
+  transform-style: preserve-3d;
+  -webkit-perspective: 30em;
+  perspective: 30em;
+}
+
+.sentence {
+  pointer-events: none;
+  transform: translateZ(0); // force hw acceleration
+  margin: auto;
+  transform-style: preserve-3d;
+  font-size: 4em;
+  color: #f0f0f0;
+  text-align: center;
+  -webkit-box-reflect: below -1em -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255,255,255,.4)));
+
+  span {
+    -webkit-animation: seawave 2s linear infinite alternate;
+    animation: seawave 2s linear infinite alternate;
+    opacity: 0;
+  }
+  h1 {
+    font-weight: bold;
+    font-family: 'Courgette', sans-serif;
+  }
+  h2 {
+    font-weight: thin;
+    font-family: 'Poiret One', sans-serif;
+  }
+  h1 span {
+    @for $i from 1 through 15 {
+      &:nth-child(#{$i}) {
+        -webkit-animation-delay: #{$i/40}s;
+        animation-delay: #{$i/40}s;
+      }
+    }
+  }
+  h2 span {
+    @for $i from 1 through 22 {
+      &:nth-child(#{$i}) {
+        -webkit-animation-delay: #{$i/20 + .5}s;
+        animation-delay: #{$i/20 + .5}s;
+      }
+    }
+  }
+}
