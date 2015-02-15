@@ -393,6 +393,11 @@ a {
 * Author: joy.du(飘零雾雨)
 * Time: 2013.10.17
 */
+.g-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+
 /**
  * module: m-demo
  * Author: joy.du(飘零雾雨)
@@ -593,13 +598,24 @@ a {
       display: block;
       width: 100%; }
 
+.gu-toolbar-disabled {
+  background: #eee;
+  color: #aaa; }
+  .gu-toolbar-disabled .item .decorate {
+    color: #dfdfdf; }
+
 .gu-toolbar-light {
   background: #cb99c5;
   color: #fff; }
   .gu-toolbar-light .item .decorate {
     color: #fff; }
 
-.gu-toolbar {
-  position: absolute;
-  bottom: 0;
-  width: 100%; }
+.gu-toolbar-normal {
+  background: #f0d264;
+  color: #fff; }
+
+.gu-toolbar-info {
+  background: #4a87ee;
+  color: #fff; }
+  .gu-toolbar-info .item .decorate {
+    color: #0456e2; }

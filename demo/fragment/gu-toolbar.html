@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <meta name="format-detection" content="telephone=no" />
 <link rel="apple-touch-icon-precomposed" href="/qunar-touch.png" />
-<title>header - 头部</title>
+<title>toolbar</title>
 <link rel="stylesheet" href="../../usage/demo/export/gu-toolbar.css" />
 </head>
 <body>
@@ -16,28 +16,30 @@
     <div class="device">
         <div class="stage">
             <h2 class="gu-header">Default Toolbar</h2>
-            <ul class="gu-toolbar">
-                <li class="item">
-                    <div class="cont">
-                        Home
-                    </div>
-                </li>
-                <li class="item">
-                    <div class="cont">
-                        TOOLS
-                    </div>
-                </li>
-                <li class="item">
-                    <div class="cont">
-                        GITHUB
-                    </div>
-                </li>
-                <li class="item">
-                    <div class="cont">
-                        LOVE
-                    </div>
-                </li>
-            </ul>
+            <div class="g-footer">
+                <ul class="gu-toolbar">
+                    <li class="item">
+                        <div class="cont">
+                            Home
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="cont">
+                            TOOLS
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="cont">
+                            GITHUB
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="cont">
+                            LOVE
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     <code class="code"><xmp>
@@ -70,29 +72,32 @@
 <div class="m-demo">
     <div class="device">
         <div class="stage">
-            <h2 class="gu-header">Default Toolbar</h2>
-            <ul class="gu-toolbar">
-                <li class="item">
-                    <div class="cont">
-                        <i class="yo-ico decorate">&#xf015;</i>
-                    </div>
-                </li>
-                <li class="item">
-                    <div class="cont">
-                        <i class="yo-ico decorate">&#xf085;</i>
-                    </div>
-                </li>
-                <li class="item">
-                    <div class="cont">
-                        <i class="yo-ico decorate">&#xf09b;</i>
-                    </div>
-                </li>
-                <li class="item">
-                    <div class="cont">
-                        <i class="yo-ico decorate">&#xf004;</i>
-                    </div>
-                </li>
-            </ul>
+            <h2 class="gu-header">Icon Toolbar</h2>
+            <div class="g-footer">
+                <ul class="gu-toolbar">
+                    <li class="item">
+                        <div class="cont">
+                            <i class="yo-ico decorate">&#xf015;</i>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="cont">
+                            <i class="yo-ico decorate">&#xf085;</i>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="cont">
+                            <i class="yo-ico decorate">&#xf09b;</i>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="cont">
+                            <i class="yo-ico decorate">&#xf004;</i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
         </div>
     </div>
     <code class="code"><xmp>
@@ -126,40 +131,123 @@
 <div class="m-demo">
     <div class="device">
         <div class="stage">
-            <h2 class="gu-header">Default Toolbar</h2>
-            <ul class="gu-toolbar gu-toolbar-light">
-                <li class="item">
-                    <div class="cont">
-                        <i class="yo-ico decorate">&#xf015;</i>
-                        Home
-                    </div>
-                </li>
-                <li class="item">
-                    <div class="cont">
-                        <i class="yo-ico decorate">&#xf085;</i>
-                        TOOLS
-                    </div>
-                </li>
-                <li class="item">
-                    <div class="cont">
-                        <i class="yo-ico decorate">&#xf09b;</i>
-                        GITHUB
-                    </div>
-                </li>
-                <li class="item">
-                    <div class="cont">
-                        <i class="yo-ico decorate">&#xf004;</i>
-                        LOVE
-                    </div>
-                </li>
-            </ul>
+            <h2 class="gu-header">Theme Toolbar</h2>
+            <div class="g-footer">   
+                <ul class="gu-toolbar gu-toolbar-light">
+                    <li class="item">
+                        <div class="cont">
+                            <i class="yo-ico decorate">&#xf015;</i>
+                            Home
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="cont">
+                            <i class="yo-ico decorate">&#xf085;</i>
+                            TOOLS
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="cont">
+                            <i class="yo-ico decorate">&#xf09b;</i>
+                            GITHUB
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="cont">
+                            <i class="yo-ico decorate">&#xf004;</i>
+                            LOVE
+                        </div>
+                    </li>
+                </ul>
+                <ul class="gu-toolbar gu-toolbar-disabled">
+                    <li class="item">
+                        <div class="cont">
+                            <i class="yo-ico decorate">&#xf015;</i>
+                            Home
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="cont">
+                            <i class="yo-ico decorate">&#xf085;</i>
+                            TOOLS
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="cont">
+                            <i class="yo-ico decorate">&#xf09b;</i>
+                            GITHUB
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="cont">
+                            <i class="yo-ico decorate">&#xf004;</i>
+                            LOVE
+                        </div>
+                    </li>
+                </ul>
+                <ul class="gu-toolbar gu-toolbar-normal">
+                    <li class="item">
+                        <div class="cont">
+                            <i class="yo-ico decorate">&#xf015;</i>
+                            Home
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="cont">
+                            <i class="yo-ico decorate">&#xf085;</i>
+                            TOOLS
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="cont">
+                            <i class="yo-ico decorate">&#xf09b;</i>
+                            GITHUB
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="cont">
+                            <i class="yo-ico decorate">&#xf004;</i>
+                            LOVE
+                        </div>
+                    </li>
+                </ul>
+                <ul class="gu-toolbar gu-toolbar-info">
+                    <li class="item">
+                        <div class="cont">
+                            <i class="yo-ico decorate">&#xf015;</i>
+                            Home
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="cont">
+                            <i class="yo-ico decorate">&#xf085;</i>
+                            TOOLS
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="cont">
+                            <i class="yo-ico decorate">&#xf09b;</i>
+                            GITHUB
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="cont">
+                            <i class="yo-ico decorate">&#xf004;</i>
+                            LOVE
+                        </div>
+                    </li>
+                </ul>
+            </div> 
         </div>
     </div>
     <code class="code"><xmp>
     添加主题色:
     theme:(
         //{bgcolor} {color} {decorate color}
-        light: #cb99c5 #fff #fff
+        disabled : #eee #aaa #dfdfdf,
+        light    : #cb99c5 #fff #fff,
+        normal   : #f0d264 #fff null,
+        info     : #4a87ee #fff #0456e2
     )
     <ul class="gu-toolbar gu-toolbar-light">
         <li class="item">

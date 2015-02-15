@@ -178,7 +178,10 @@ $toolbar:(
 	// 预设主题颜色
 	theme:(
 		//{bgcolor} {color} {decorate color}
-        light    : #cb99c5 #fff #fff
+        disabled : #eee #aaa #dfdfdf,
+        light    : #cb99c5 #fff #fff,
+        normal   : #f0d264 #fff null,
+        info     : #4a87ee #fff #0456e2
 	)
 ) !default;
 

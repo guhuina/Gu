@@ -393,6 +393,11 @@ a {
 * Author: joy.du(飘零雾雨)
 * Time: 2013.10.17
 */
+.g-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+
 /**
  * module: m-demo
  * Author: joy.du(飘零雾雨)
