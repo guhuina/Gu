@@ -1,0 +1,41 @@
+.gu-toolbar {
+    background: map-get($toolbar, bgcolor);
+    color: map-get($toolbar, color);
+    line-height: map-get($toolbar, font-size) * 1.5;
+    @include flexbox;
+    border-top: 1px solid map-get($toolbar, bordercolor);
+    .item {
+        @include flex(1);
+        padding: map-deep-get($toolbar, item, padding);
+        //border-right: 1px solid map-deep-get($toolbar, item, bordercolor);
+        text-align: center;
+        @include flexbox;
+        &:active {
+            background: map-deep-get($toolbar, item, active-bgcolor);
+        }
+        .decorate {
+            display: inline-block;
+            width: .2rem;
+            color: map-deep-get($toolbar, decorate, color);
+            font-size: map-deep-get($toolbar, decorate, font-size);
+            margin-right: .05rem;
+        }
+        .cont {
+            @include flex(1);
+        }
+    }
+
+
+}
+
+@each $name, $value in map-deep-get($toolbar, theme) {
+    .gu-toolbar-#{$name} {
+        background: nth($value,1);
+        color: nth($value,2);
+        .item {
+            .decorate {
+                color: nth($value,3); 
+            }
+        }    
+    }
+} 

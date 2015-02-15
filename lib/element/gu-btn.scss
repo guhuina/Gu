@@ -1,17 +1,4 @@
 .gu-btn {
-    // display: inline-block;
-    // overflow: hidden;
-    // padding: map-get($btn, padding);
-    // border: .01rem solid map-get($btn, bordercolor);
-    // // 内阴影，用来描内部的1px白边
-    // box-shadow: inset 1px 1px rgba(255, 255, 255, .1);
-    // border-radius: map-get($btn, radius);
-    // background-color: map-get($btn, bgcolor);
-    // color: map-get($btn, color);
-    // text-align: center;
-    // vertical-align: middle;
-    // cursor: pointer;
-
     text-decoration: none;
     color: white;
     padding: map-get($btn, padding);

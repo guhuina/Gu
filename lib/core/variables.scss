@@ -159,6 +159,28 @@ $list:(
 	)
 ) !default;
 
+// list
+$toolbar:(
+	bgcolor: null,
+	bordercolor:#ccc,
+	color:map-get($base,color),
+	font-size:map-get($base,font-size),
+	item:(
+		padding: .11rem,
+		bgcolor: null,
+		bordercolor:#ccc,
+		active-bgcolor:#ddd
+	), 
+	decorate:(
+		color: #aaa,
+		font-size: .18rem
+	),
+	// 预设主题颜色
+	theme:(
+		//{bgcolor} {color} {decorate color}
+        light    : #cb99c5 #fff #fff
+	)
+) !default;
 
 //element btn
 $btn:(
@@ -190,8 +212,7 @@ $btn:(
         disabled : #eee #aaa #dfdfdf,
         light    : #cb99c5 #fff null,
         normal   : #f0d264 #fff null,
-        info     : #4a87ee #fff #0456e2,
-
+        info     : #4a87ee #fff #0456e2
 	)
 )!default;
 

@@ -1,0 +1,13 @@
+@charset "utf-8";
+@import "../layout/layout";
+@import "../module/m-demo";
+@import "../module/m-code";
+@import "../../../lib/fragment/gu-header";
+@import "../../../lib/fragment/gu-toolbar";
+
+
+.gu-toolbar{
+	position:absolute;
+	bottom:0;
+	width: 100%;
+}
