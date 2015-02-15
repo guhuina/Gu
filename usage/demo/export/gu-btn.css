@@ -518,16 +518,14 @@ a {
     white-space: nowrap;
     text-overflow: ellipsis;
     margin: 0 0.6rem; }
-  .gu-header > .regret,
-  .gu-header > .affirm {
+  .gu-header > .regret, .gu-header > .affirm {
     position: absolute;
     top: 0;
     width: 0.6rem;
     font-size: 0.14rem;
     color: #00afc7;
     cursor: pointer; }
-    .gu-header > .regret:active,
-    .gu-header > .affirm:active {
+    .gu-header > .regret:active, .gu-header > .affirm:active {
       opacity: .5; }
   .gu-header > .regret {
     left: 0;
@@ -590,17 +588,18 @@ a {
     font-size: 0.18rem; }
 
 .gu-btn {
-  display: inline-block;
-  overflow: hidden;
+  text-decoration: none;
+  color: white;
   padding: 0 1.2em;
-  border: 0.01rem solid #e26704;
-  box-shadow: inset 1px 1px rgba(255, 255, 255, 0.1);
-  border-radius: 0.02rem;
-  background-color: #ff801a;
-  color: #fff;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer; }
+  display: inline-block;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.21);
+  border-bottom: 4px solid rgba(0, 0, 0, 0.21);
+  border-radius: 4px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  background: #1bbcc2;
+  background: -webkit-linear-gradient(#1bbcc2 0%, #159195 100%);
+  background: linear-gradient(#1bbcc2 0%, #159195 100%); }
   .gu-btn:focus, .gu-btn:active {
     opacity: .8; }
   .gu-btn-s {
@@ -620,21 +619,27 @@ a {
 
 .gu-btn-disabled {
   background: #eee;
-  color: #d9d9d9;
+  background: -webkit-linear-gradient(#eeeeee 0%, #d4d4d4 100%);
+  background: linear-gradient(#eeeeee 0%, #d4d4d4 100%);
+  color: #aaa;
   border-color: #dfdfdf; }
 
 .gu-btn-light {
-  background: #fff;
-  color: #212121;
-  border-color: #ddd; }
+  background: #cb99c5;
+  background: -webkit-linear-gradient(#cb99c5 0%, #ba77b2 100%);
+  background: linear-gradient(#cb99c5 0%, #ba77b2 100%);
+  color: #fff; }
 
 .gu-btn-normal {
-  background: #eee;
-  color: #212121;
-  border-color: #ddd; }
+  background: #f0d264;
+  background: -webkit-linear-gradient(#f0d264 0%, #ecc435 100%);
+  background: linear-gradient(#f0d264 0%, #ecc435 100%);
+  color: #fff; }
 
 .gu-btn-info {
   background: #4a87ee;
+  background: -webkit-linear-gradient(#4a87ee 0%, #1b68ea 100%);
+  background: linear-gradient(#4a87ee 0%, #1b68ea 100%);
   color: #fff;
   border-color: #0456e2; }
 

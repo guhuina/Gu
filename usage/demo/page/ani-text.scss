@@ -2,66 +2,95 @@
 @import "../layout/layout";
 @import "../module/m-demo";
 @import "../module/m-code";
-
-
-
-*, *:after, *:before {
-  box-sizing: border-box;
-}
-
-.page{
-	width: 100%;
-	height: 100%;
-	background: #F0544F;
-	color: #fff;
-	font-family: 'Poiret One', sans-serif;
-	overflow: hidden;
-}
-
-.page{
-  display: flex;
-  transform-style: preserve-3d;
-  -webkit-perspective: 30em;
-  perspective: 30em;
-}
-
-.sentence {
-  pointer-events: none;
-  transform: translateZ(0); // force hw acceleration
-  margin: auto;
-  transform-style: preserve-3d;
-  font-size: 4em;
-  color: #f0f0f0;
-  text-align: center;
-  -webkit-box-reflect: below -1em -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255,255,255,.4)));
-
-  span {
-    -webkit-animation: seawave 2s linear infinite alternate;
-    animation: seawave 2s linear infinite alternate;
-    opacity: 0;
-  }
-  h1 {
-    font-weight: bold;
-    font-family: 'Courgette', sans-serif;
-  }
-  h2 {
-    font-weight: thin;
+.page {
+    width: 100%;
+    height: 100%;
+    background: #F0544F;
+    color: #fff;
     font-family: 'Poiret One', sans-serif;
-  }
-  h1 span {
-    @for $i from 1 through 15 {
-      &:nth-child(#{$i}) {
-        -webkit-animation-delay: #{$i/40}s;
-        animation-delay: #{$i/40}s;
-      }
+    overflow: hidden;
+    display: flex;
+    transform-style: preserve-3d;
+    -webkit-perspective: 30em;
+    perspective: 30em;
+}
+.sentence {
+    pointer-events: none;
+    transform: translateZ(0);
+    // force hw acceleration
+    margin: auto;
+    transform-style: preserve-3d;
+    font-size: 4em;
+    color: #f0f0f0;
+    text-align: center;
+    -webkit-box-reflect: below -1em -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, .4)));
+    span {
+        -webkit-animation: seawave 2s linear infinite alternate;
+        animation: seawave 2s linear infinite alternate;
+        opacity: 0;
     }
-  }
-  h2 span {
-    @for $i from 1 through 22 {
-      &:nth-child(#{$i}) {
-        -webkit-animation-delay: #{$i/20 + .5}s;
-        animation-delay: #{$i/20 + .5}s;
-      }
+    h1 {
+        font-weight: bold;
+        font-family: 'Courgette', sans-serif;
     }
-  }
+    h2 {
+        font-weight: thin;
+        font-family: 'Poiret One', sans-serif;
+    }
+    h1 span {
+        @for $i from 1 through 15 {
+            &:nth-child(#{$i}) {
+                -webkit-animation-delay:#{$i/40}s;
+                animation-delay:#{$i/40}s;
+            }
+        }
+    }
+    h2 span {
+        @for $i from 1 through 22 {
+            &:nth-child(#{$i}) {
+                -webkit-animation-delay:#{$i/20 + .5}s;
+                animation-delay:#{$i/20 + .5}s;
+            }
+        }
+    }
+}
+.content {
+    background: #F0544F;
+    @include alignment(2.8rem, 3rem);
+    z-index: 2;
+    > h1 {
+        color: rgba(255, 255, 255, .6);
+        font-size: .64rem;
+    }
+    > h2 {
+        color: rgba(0, 0, 0, .2);
+        font-size: .3rem;
+    }
+    > .text {
+        height: 1rem;
+        color: rgba(255, 255, 255, .9);
+        font-size: .36rem;
+        line-height: 1rem;
+    }
+    > select {
+        position: relative;
+        width: 70%;
+        height: .44rem;
+        margin: .1rem 0;
+        padding: 0 .15rem;
+        border: 0;
+        border-radius: .02rem;
+        line-height: .44rem;
+        box-shadow: 0 .03rem 0 rgba(0, 0, 0, .1);
+        background: #fff;
+        color: #aaa;
+        cursor: pointer;
+        font-size: .16rem;
+        @include appearance;
+        text-transform: capitalize;
+        background-size: .1rem .1rem;
+        background-repeat: no-repeat;
+        background-position: right .1rem center;
+        background-image: radial-gradient(circle, #0ac2d2, #0ac2d2 50%, transparent, transparent);
+    }
 }

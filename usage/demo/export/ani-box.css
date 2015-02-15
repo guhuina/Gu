@@ -502,17 +502,18 @@ a {
     font-size: 16px; }
 
 .gu-btn {
-  display: inline-block;
-  overflow: hidden;
+  text-decoration: none;
+  color: white;
   padding: 0 1.2em;
-  border: 0.01rem solid #e26704;
-  box-shadow: inset 1px 1px rgba(255, 255, 255, 0.1);
-  border-radius: 0.02rem;
-  background-color: #ff801a;
-  color: #fff;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer; }
+  display: inline-block;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.21);
+  border-bottom: 4px solid rgba(0, 0, 0, 0.21);
+  border-radius: 4px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  background: #1bbcc2;
+  background: -webkit-linear-gradient(#1bbcc2 0%, #159195 100%);
+  background: linear-gradient(#1bbcc2 0%, #159195 100%); }
   .gu-btn:focus, .gu-btn:active {
     opacity: .8; }
   .gu-btn-s {
@@ -532,21 +533,27 @@ a {
 
 .gu-btn-disabled {
   background: #eee;
-  color: #d9d9d9;
+  background: -webkit-linear-gradient(#eeeeee 0%, #d4d4d4 100%);
+  background: linear-gradient(#eeeeee 0%, #d4d4d4 100%);
+  color: #aaa;
   border-color: #dfdfdf; }
 
 .gu-btn-light {
-  background: #fff;
-  color: #212121;
-  border-color: #ddd; }
+  background: #cb99c5;
+  background: -webkit-linear-gradient(#cb99c5 0%, #ba77b2 100%);
+  background: linear-gradient(#cb99c5 0%, #ba77b2 100%);
+  color: #fff; }
 
 .gu-btn-normal {
-  background: #eee;
-  color: #212121;
-  border-color: #ddd; }
+  background: #f0d264;
+  background: -webkit-linear-gradient(#f0d264 0%, #ecc435 100%);
+  background: linear-gradient(#f0d264 0%, #ecc435 100%);
+  color: #fff; }
 
 .gu-btn-info {
   background: #4a87ee;
+  background: -webkit-linear-gradient(#4a87ee 0%, #1b68ea 100%);
+  background: linear-gradient(#4a87ee 0%, #1b68ea 100%);
   color: #fff;
   border-color: #0456e2; }
 
@@ -556,9 +563,6 @@ a {
   padding: 0;
   margin: 0;
   overflow: hidden; }
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 1em 0; }
 
 .page {
   text-align: center;
@@ -577,17 +581,16 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100px;
   position: relative; }
-
-.cube .side {
-  width: 100px;
-  height: 100px;
-  display: block;
-  position: absolute;
-  border: 1px solid #eee;
-  left: 50%;
-  margin-left: -50px;
-  background: rgba(225, 225, 225, 0.25);
-  transform-style: preserve-3d; }
+  .cube .side {
+    width: 100px;
+    height: 100px;
+    display: block;
+    position: absolute;
+    border: 1px solid #eee;
+    left: 50%;
+    margin-left: -50px;
+    background: rgba(225, 225, 225, 0.25);
+    transform-style: preserve-3d; }
 
 .cube .front {
   -webkit-animation: 10s spin-front linear infinite;

@@ -1,16 +1,29 @@
 .gu-btn {
-    display: inline-block;
-    overflow: hidden;
+    // display: inline-block;
+    // overflow: hidden;
+    // padding: map-get($btn, padding);
+    // border: .01rem solid map-get($btn, bordercolor);
+    // // 内阴影，用来描内部的1px白边
+    // box-shadow: inset 1px 1px rgba(255, 255, 255, .1);
+    // border-radius: map-get($btn, radius);
+    // background-color: map-get($btn, bgcolor);
+    // color: map-get($btn, color);
+    // text-align: center;
+    // vertical-align: middle;
+    // cursor: pointer;
+
+    text-decoration: none;
+    color: white;
     padding: map-get($btn, padding);
-    border: .01rem solid map-get($btn, bordercolor);
-    // 内阴影，用来描内部的1px白边
-    box-shadow: inset 1px 1px rgba(255, 255, 255, .1);
-    border-radius: map-get($btn, radius);
-    background-color: map-get($btn, bgcolor);
-    color: map-get($btn, color);
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    border: 1px solid rgba(map-get($btn, bordercolor),0.21);
+    border-bottom: 4px solid rgba(map-get($btn, bordercolor),0.21);
+    border-radius: 4px;
+    text-shadow: 0 1px 0 rgba(map-get($btn, bordercolor),0.15);
+    background: map-get($btn, bgcolor);
+    background: -webkit-linear-gradient(lighten(map-get($btn, bgcolor),0%) 0%, darken(map-get($btn, bgcolor),10%) 100%);
+    background: linear-gradient(lighten(map-get($btn, bgcolor),0%) 0%, darken(map-get($btn, bgcolor),10%) 100%);
     &:focus, &:active {
         opacity: .8;
     }
@@ -33,4 +46,13 @@
         width: 100%;
     }
 }
-@include set-theme($btn, ".gu-btn");
+
+@each $name, $value in map-deep-get($btn, theme) {
+    .gu-btn-#{$name} {
+        background: nth($value,1);
+        background: -webkit-linear-gradient(lighten( nth($value,1), 0% ) 0%, darken(nth($value,1),10% ) 100%);
+        background: linear-gradient(lighten( nth($value,1), 0% ) 0%, darken(nth($value,1),10% ) 100%);
+        color: nth($value,2);
+        border-color:nth($value,3);
+    }
+}    

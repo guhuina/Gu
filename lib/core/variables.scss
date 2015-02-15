@@ -163,9 +163,9 @@ $list:(
 //element btn
 $btn:(
 	// {Color} 按钮边框色
-	bordercolor: #e26704,
+	bordercolor: #000,
 	// {Color} 按钮背景色
-	bgcolor:     #ff801a,
+	bgcolor:     #1bbcc2,
 	// {Color} 按钮文本色
 	color:       #fff,
 	// {Length} 按钮内补白(使用em让根据字号动态调整)
@@ -187,10 +187,11 @@ $btn:(
 	// 预设disabled状态
 	theme:(
 		//{bgcolor} {color} {bordercolor}
-        disabled : #eee #d9d9d9 #dfdfdf,
-        light    : #fff #212121 #ddd,
-        normal   : #eee #212121 #ddd,
-        info     : #4a87ee #fff #0456e2
+        disabled : #eee #aaa #dfdfdf,
+        light    : #cb99c5 #fff null,
+        normal   : #f0d264 #fff null,
+        info     : #4a87ee #fff #0456e2,
+
 	)
 )!default;
 

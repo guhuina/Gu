@@ -518,16 +518,14 @@ a {
     white-space: nowrap;
     text-overflow: ellipsis;
     margin: 0 0.6rem; }
-  .gu-header > .regret,
-  .gu-header > .affirm {
+  .gu-header > .regret, .gu-header > .affirm {
     position: absolute;
     top: 0;
     width: 0.6rem;
     font-size: 0.14rem;
     color: #00afc7;
     cursor: pointer; }
-    .gu-header > .regret:active,
-    .gu-header > .affirm:active {
+    .gu-header > .regret:active, .gu-header > .affirm:active {
       opacity: .5; }
   .gu-header > .regret {
     left: 0;
