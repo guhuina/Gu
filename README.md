@@ -42,5 +42,24 @@
 	└── fonts/
 
 #Usage
+	
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<title>Gu Template</title>
 
+			<!-- Latest compiled and minified CSS -->
+			<link rel="stylesheet" href="css/gu.min.css">
+
+			<!-- Latest compiled and minified JavaScript -->
+			<script src="js/gu.min.js"></script>
+
+		</head>
+		<body>
+			<!-- content -->
+		</body>
+	</html>
 
