@@ -3,10 +3,16 @@
 @import "../module/m-demo";
 @import "../module/m-code";
 @import "../../../lib/element/gu-btn";
+@import "../../../lib/fragment/gu-list";
 @import "../../../lib/animate/gu-btn";
 
-.box{
+.gu-list .item{
 	// width:2rem;
 	// height:2rem;
-	@include center;
+	padding:13px;
+	text-align:center;
+	@include justify-content(center);
+	&:last-child{
+		border-bottom: none;
+	}
 }
