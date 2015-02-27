@@ -633,3 +633,6 @@ a {
   justify-content: center; }
   .gu-list .item:last-child {
     border-bottom: none; }
+  .gu-list .item > a:hover {
+    animation: none;
+    -webkit-animation: none; }
