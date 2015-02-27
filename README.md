@@ -2,9 +2,11 @@
 移动前端CSS Framework 
 > Inspired by Yo
 
+
 # Quick start
 * Clone the repo: git clone git@github.com:guhuina/Gu.git.
 
+#Install prerequisites
 
 # Precompiled Gu
 	Gu/
@@ -38,4 +40,7 @@
 	├── js/
 	│   
 	└── fonts/
-	
+
+#Usage
+
+
