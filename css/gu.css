@@ -3175,13 +3175,10 @@
     transform-style: preserve-3d;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7); } }
 .ani.bump {
-  -webkit-animation: bounce 1s infinite;
-  animation: bounce 1s infinite;
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
   -webkit-transform-origin: center bottom;
   transform-origin: center bottom; }
-  .ani.bump:hover, .ani.bump:focus {
-    animation: none;
-    -webkit-animation: none; }
 
 @-webkit-keyframes seawave {
   0% {
@@ -3693,6 +3690,42 @@ a {
   background: linear-gradient(#4a87ee 0%, #1b68ea 100%);
   color: #fff;
   border-color: #0456e2; }
+
+.gu-btn-them_1 {
+  background: #0ac2d2;
+  background: -webkit-linear-gradient(#0ac2d2 0%, #0895a1 100%);
+  background: linear-gradient(#0ac2d2 0%, #0895a1 100%);
+  color: #fff; }
+
+.gu-btn-them_2 {
+  background: #7bb7fa;
+  background: -webkit-linear-gradient(#7bb7fa 0%, #4a9cf8 100%);
+  background: linear-gradient(#7bb7fa 0%, #4a9cf8 100%);
+  color: #fff; }
+
+.gu-btn-them_3 {
+  background: #60d7a9;
+  background: -webkit-linear-gradient(#60d7a9 0%, #37cd93 100%);
+  background: linear-gradient(#60d7a9 0%, #37cd93 100%);
+  color: #fff; }
+
+.gu-btn-them_4 {
+  background: #fdc162;
+  background: -webkit-linear-gradient(#fdc162 0%, #fcad30 100%);
+  background: linear-gradient(#fdc162 0%, #fcad30 100%);
+  color: #fff; }
+
+.gu-btn-them_5 {
+  background: #fd6a62;
+  background: -webkit-linear-gradient(#fd6a62 0%, #fc3a30 100%);
+  background: linear-gradient(#fd6a62 0%, #fc3a30 100%);
+  color: #fff; }
+
+.gu-btn-them_6 {
+  background: #f68dbb;
+  background: -webkit-linear-gradient(#f68dbb 0%, #f25e9f 100%);
+  background: linear-gradient(#f68dbb 0%, #f25e9f 100%);
+  color: #fff; }
 
 .stage {
   width: 100%;

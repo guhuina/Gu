@@ -41,7 +41,7 @@
 	│   
 	└── fonts/
 
-#Usage
+# Usage
 	
 	<!DOCTYPE html>
 	<html lang="en">
@@ -63,3 +63,37 @@
 		</body>
 	</html>
 
+
+# Advanced Usage
+> If you are not satisfied with present style,you can do so. eg:
+
+## step1 open the variables.scss file and edit
+
+	$toolbar:(
+		bgcolor: null,
+		bordercolor:#ccc,
+		color:map-get($base,color),
+		font-size:map-get($base,font-size),
+		item:(
+			padding: .11rem,
+			bgcolor: null,
+			bordercolor:#ccc,
+			active-bgcolor:#ddd
+		), 
+		decorate:(
+			color: #aaa,
+			font-size: .18rem
+		),
+		// 预设主题颜色
+		theme:(
+			//{bgcolor} {color} {decorate color}
+	        disabled : #eee #aaa #dfdfdf,
+	        light    : #cb99c5 #fff #fff,
+	        normal   : #f0d264 #fff null,
+	        info     : #4a87ee #fff #0456e2
+		)
+	) !default;
+
+## step2 complie and min
+	
+	$ gulp complie && gulp min
