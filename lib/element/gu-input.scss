@@ -34,7 +34,7 @@
     }
     input:focus ~ label, input:valid ~ label {
         left: -.5rem;
-        color: #222;
+        color: #8f9598;
     }
     &::after{
         display: block;
@@ -79,7 +79,6 @@
         background: nth($value,1);
         input{
             border-color: nth($value,1);
-
         }
         &::after{
             background-color:nth($value,1);

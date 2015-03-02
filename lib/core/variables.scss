@@ -229,16 +229,17 @@ $btn:(
 $input:(
 	// {Length} 宽度
 	width: 2rem,
-	// {Length} 按钮字号
+	// {Length} 输入框字号
 	font-size:   .16rem,
+	// {Length} 输入框行高
 	line-height: .16rem * 1.5,
-	// {Color} 按钮边框色
+	// {Color}  输入框边框色
 	bordercolor: #ec503b,
-	// {Color} 按钮背景色
+	// {Color}  输入框背景色
 	bgcolor:     null,
-	// {Color} 按钮文本色
+	// {Color}  输入框文本色
 	color:       #222,
-	// {Length} 按钮内补白(使用em让根据字号动态调整)
+	// {Length} 输入框内补白(使用em让根据字号动态调整)
 	padding:     .05rem,
 	// 预设disabled状态
 	theme:(

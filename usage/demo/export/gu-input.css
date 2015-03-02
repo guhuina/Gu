@@ -622,7 +622,7 @@ a {
     transition: left 250ms ease, color 250ms ease; }
   .gu-input input:focus ~ label, .gu-input input:valid ~ label {
     left: -.5rem;
-    color: #222; }
+    color: #8f9598; }
   .gu-input::after {
     display: block;
     content: '';
