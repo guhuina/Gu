@@ -147,7 +147,7 @@ $list:(
 		bgcolor: null,
 		bordercolor:#ccc,
 		color:map-get($base,color),
-		active-bgcolor:#ddd
+		active-bgcolor:null
 	), 
 	decorate:(
 		color: #aaa,
@@ -225,7 +225,32 @@ $btn:(
 	)
 )!default;
 
-
+//element btn
+$input:(
+	// {Length} 宽度
+	width: 2rem,
+	// {Length} 按钮字号
+	font-size:   .16rem,
+	line-height: .16rem * 1.5,
+	// {Color} 按钮边框色
+	bordercolor: #ec503b,
+	// {Color} 按钮背景色
+	bgcolor:     null,
+	// {Color} 按钮文本色
+	color:       #222,
+	// {Length} 按钮内补白(使用em让根据字号动态调整)
+	padding:     .05rem,
+	// 预设disabled状态
+	theme:(
+		//{bgcolor} {color} {bordercolor}
+        them_1   : #0ac2d2 #fff null,
+        them_2   : #7bb7fa #fff null,
+        them_3   : #60d7a9 #fff null,
+        them_4   : #fdc162 #fff null,
+        them_5   : #fd6a62 #fff null,
+        them_6   : #f68dbb #fff null,
+	)
+)!default;
 
 
 

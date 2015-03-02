@@ -590,97 +590,128 @@ a {
     color: #aaa;
     font-size: 0.18rem; }
 
-.gu-btn {
-  text-decoration: none;
-  color: white;
-  padding: 0 1.2em;
-  display: inline-block;
-  position: relative;
-  border: 1px solid rgba(0, 0, 0, 0.21);
-  border-bottom: 4px solid rgba(0, 0, 0, 0.21);
-  border-radius: 4px;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
-  background: #1bbcc2;
-  background: -webkit-linear-gradient(#1bbcc2 0%, #159195 100%);
-  background: linear-gradient(#1bbcc2 0%, #159195 100%); }
-  .gu-btn:focus, .gu-btn:active {
-    opacity: .8; }
-  .gu-btn-s {
-    height: 0.28rem;
-    line-height: 0.28rem;
-    font-size: 0.12rem; }
-  .gu-btn-m {
-    height: 0.36rem;
-    line-height: 0.36rem;
-    font-size: 0.14rem; }
-  .gu-btn-l {
-    height: 0.44rem;
-    line-height: 0.44rem;
-    font-size: 0.16rem; }
-  .gu-btn-stacked {
-    width: 100%; }
+.gu-input {
+  position: relative; }
+  .gu-input input {
+    width: 2rem;
+    -webkit-appearance: none;
+    padding: 0.05rem;
+    border: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 0.24rem;
+    font-family: 'Droid Serif', serif;
+    font-weight: 700;
+    color: #222;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #ec503b;
+    border-right: 1px solid #ec503b; }
+    .gu-input input:focus {
+      outline: none; }
+  .gu-input label {
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    margin-top: -.1rem;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #8f9598;
+    -webkit-transition: left 250ms ease, color 250ms ease;
+    transition: left 250ms ease, color 250ms ease; }
+  .gu-input input:focus ~ label, .gu-input input:valid ~ label {
+    left: -.5rem;
+    color: #222; }
+  .gu-input::after {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: -.03rem;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #ec503b;
+    -webkit-transition: width 250ms 250ms ease;
+    transition: width 250ms 250ms ease; }
+  .gu-input::before {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -.03rem;
+    height: 0;
+    width: 3px;
+    background-color: #ec503b;
+    -webkit-transition: height 250ms ease;
+    transition: height 250ms ease; }
+  .gu-input:active:after {
+    width: 2.03rem;
+    -webkit-transition: width 250ms ease;
+    transition: width 250ms ease; }
+  .gu-input:active:before {
+    height: 0.35rem;
+    -webkit-transition: height 250ms 250ms ease;
+    transition: height 250ms 250ms ease; }
 
-.gu-btn-disabled {
-  background: #eee;
-  background: -webkit-linear-gradient(#eeeeee 0%, #d4d4d4 100%);
-  background: linear-gradient(#eeeeee 0%, #d4d4d4 100%);
-  color: #aaa;
-  border-color: #dfdfdf; }
+.gu-input-them_1 {
+  background: #0ac2d2; }
+  .gu-input-them_1 input {
+    border-color: #0ac2d2; }
+  .gu-input-them_1::after {
+    background-color: #0ac2d2; }
+  .gu-input-them_1::before {
+    background-color: #0ac2d2; }
 
-.gu-btn-light {
-  background: #cb99c5;
-  background: -webkit-linear-gradient(#cb99c5 0%, #ba77b2 100%);
-  background: linear-gradient(#cb99c5 0%, #ba77b2 100%);
-  color: #fff; }
+.gu-input-them_2 {
+  background: #7bb7fa; }
+  .gu-input-them_2 input {
+    border-color: #7bb7fa; }
+  .gu-input-them_2::after {
+    background-color: #7bb7fa; }
+  .gu-input-them_2::before {
+    background-color: #7bb7fa; }
 
-.gu-btn-normal {
-  background: #f0d264;
-  background: -webkit-linear-gradient(#f0d264 0%, #ecc435 100%);
-  background: linear-gradient(#f0d264 0%, #ecc435 100%);
-  color: #fff; }
+.gu-input-them_3 {
+  background: #60d7a9; }
+  .gu-input-them_3 input {
+    border-color: #60d7a9; }
+  .gu-input-them_3::after {
+    background-color: #60d7a9; }
+  .gu-input-them_3::before {
+    background-color: #60d7a9; }
 
-.gu-btn-info {
-  background: #4a87ee;
-  background: -webkit-linear-gradient(#4a87ee 0%, #1b68ea 100%);
-  background: linear-gradient(#4a87ee 0%, #1b68ea 100%);
-  color: #fff;
-  border-color: #0456e2; }
+.gu-input-them_4 {
+  background: #fdc162; }
+  .gu-input-them_4 input {
+    border-color: #fdc162; }
+  .gu-input-them_4::after {
+    background-color: #fdc162; }
+  .gu-input-them_4::before {
+    background-color: #fdc162; }
 
-.gu-btn-them_1 {
-  background: #0ac2d2;
-  background: -webkit-linear-gradient(#0ac2d2 0%, #0895a1 100%);
-  background: linear-gradient(#0ac2d2 0%, #0895a1 100%);
-  color: #fff; }
+.gu-input-them_5 {
+  background: #fd6a62; }
+  .gu-input-them_5 input {
+    border-color: #fd6a62; }
+  .gu-input-them_5::after {
+    background-color: #fd6a62; }
+  .gu-input-them_5::before {
+    background-color: #fd6a62; }
 
-.gu-btn-them_2 {
-  background: #7bb7fa;
-  background: -webkit-linear-gradient(#7bb7fa 0%, #4a9cf8 100%);
-  background: linear-gradient(#7bb7fa 0%, #4a9cf8 100%);
-  color: #fff; }
+.gu-input-them_6 {
+  background: #f68dbb; }
+  .gu-input-them_6 input {
+    border-color: #f68dbb; }
+  .gu-input-them_6::after {
+    background-color: #f68dbb; }
+  .gu-input-them_6::before {
+    background-color: #f68dbb; }
 
-.gu-btn-them_3 {
-  background: #60d7a9;
-  background: -webkit-linear-gradient(#60d7a9 0%, #37cd93 100%);
-  background: linear-gradient(#60d7a9 0%, #37cd93 100%);
-  color: #fff; }
-
-.gu-btn-them_4 {
-  background: #fdc162;
-  background: -webkit-linear-gradient(#fdc162 0%, #fcad30 100%);
-  background: linear-gradient(#fdc162 0%, #fcad30 100%);
-  color: #fff; }
-
-.gu-btn-them_5 {
-  background: #fd6a62;
-  background: -webkit-linear-gradient(#fd6a62 0%, #fc3a30 100%);
-  background: linear-gradient(#fd6a62 0%, #fc3a30 100%);
-  color: #fff; }
-
-.gu-btn-them_6 {
-  background: #f68dbb;
-  background: -webkit-linear-gradient(#f68dbb 0%, #f25e9f 100%);
-  background: linear-gradient(#f68dbb 0%, #f25e9f 100%);
-  color: #fff; }
-
-.gu-btn:not(:last-child) {
-  margin-right: .1rem; }
+.gu-list .item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center; }

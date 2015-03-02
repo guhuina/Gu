@@ -1,0 +1,91 @@
+.gu-input {
+    position:relative;
+    input {
+        width: map-get($input,width);
+        background-color:map-get($input,bgcolor);
+        -webkit-appearance: none;
+        padding: map-get($input, padding);
+        border: none;
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: map-get($input, line-height);
+        font-family: 'Droid Serif', serif;
+        font-weight: 700;
+        color: map-get($input,color);
+        -webkit-font-smoothing: antialiased;
+        letter-spacing: 1px;
+        border-bottom:1px solid map-get($input,bordercolor);
+        border-right:1px solid map-get($input,bordercolor);
+        &:focus {
+            outline: none;
+        }
+    }
+    label {
+        position: absolute;
+        left: 4px;
+        top: 50%;
+        margin-top: -.1rem;
+        -webkit-font-smoothing: antialiased;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #8f9598;
+        -webkit-transition: left 250ms ease, color 250ms ease;
+        transition: left 250ms ease, color 250ms ease;
+    }
+    input:focus ~ label, input:valid ~ label {
+        left: -.5rem;
+        color: #222;
+    }
+    &::after{
+        display: block;
+        content: '';
+        position: absolute;
+        bottom: -.03rem;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background-color: map-get($input,bordercolor);
+        -webkit-transition: width 250ms 250ms ease;
+        transition: width 250ms 250ms ease;
+    }
+    &::before{
+        display: block;
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: -.03rem;
+        height: 0;
+        width: 3px;
+        background-color:map-get($input,bordercolor);
+        -webkit-transition: height 250ms ease;
+        transition: height 250ms ease;
+    }
+    &:active {
+        &:after {
+            width: map-get($input,width) + .03rem;
+            -webkit-transition: width 250ms ease;
+            transition: width 250ms ease;
+        }
+        &:before {
+            height: map-get($input,line-height) + map-get($input, padding)*2 + .01rem;
+            -webkit-transition: height 250ms 250ms ease;
+            transition: height 250ms 250ms ease;
+        }
+    }
+}
+    
+@each $name, $value in map-deep-get($input, theme) {
+    .gu-input-#{$name} {
+        background: nth($value,1);
+        input{
+            border-color: nth($value,1);
+
+        }
+        &::after{
+            background-color:nth($value,1);
+        }
+        &::before{
+            background-color:nth($value,1);
+        }
+    }
+} 

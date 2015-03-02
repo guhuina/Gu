@@ -1,0 +1,14 @@
+@charset "utf-8";
+@import "../layout/layout";
+@import "../module/m-demo";
+@import "../module/m-code";
+@import "../../../lib/fragment/gu-header";
+@import "../../../lib/fragment/gu-list";
+@import "../../../lib/element/gu-input";
+
+
+.gu-list .item{
+    @include flexbox;
+    @include justify-content(center);
+    
+}
